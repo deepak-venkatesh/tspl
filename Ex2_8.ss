@@ -32,3 +32,16 @@
     (cond ((= n 0) '()) 
 	  (else (cons x (make-list (- n 1) x))))))
 
+
+;; ex 2.8.4
+
+(define list-ref
+  (lambda (lst n)
+    (cond ((= n 0) (car lst))
+	  (else (list-ref (cdr lst) (- n 1))))))
+
+(define list-tail
+  (lambda (lst n)
+    (cond ((= n 0) lst)
+	  (else (list-tail (cdr lst) (- n 1))))))
+
