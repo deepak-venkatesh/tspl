@@ -23,3 +23,12 @@
   (lambda (lst arg)
     (cond ((null? lst) arg)
           (else (cons (car lst) (append-two (cdr lst) arg))))))
+
+
+;; ex 2.8.3
+
+(define make-list
+  (lambda (n x)
+    (cond ((= n 0) '()) 
+	  (else (cons x (make-list (- n 1) x))))))
+
