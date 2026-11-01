@@ -45,3 +45,16 @@
     (cond ((= n 0) lst)
 	  (else (list-tail (cdr lst) (- n 1))))))
 
+
+;; ex 2.8.5
+
+(define shorter?
+  (lambda (lst1 lst2)
+    (and (not (null? lst2))
+	 (or (null? lst1)
+	     (shorter? (cdr lst1) (cdr lst2))))))
+
+(define shorter
+  (lambda (lst1 lst2)
+    (cond ((shorter? lst2 lst1) lst2)
+	  (else lst1))))
