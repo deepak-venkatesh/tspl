@@ -72,3 +72,12 @@
     (cond ((= n 0) #f)
 	  (else (even? (- n 1))))))
 
+
+;; ex 2.8.7
+
+(define transpose
+  (lambda (pair)
+    (cons (map car pair) (map cdr pair))))
+
+
+
