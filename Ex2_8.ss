@@ -58,3 +58,17 @@
   (lambda (lst1 lst2)
     (cond ((shorter? lst2 lst1) lst2)
 	  (else lst1))))
+
+
+;; ex 2.8.6
+
+(define even?
+  (lambda (n)
+    (cond ((= n 0) #t)
+	  (else (odd? (- n 1))))))
+
+(define odd?
+  (lambda (n)
+    (cond ((= n 0) #f)
+	  (else (even? (- n 1))))))
+
